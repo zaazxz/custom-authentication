@@ -55,31 +55,6 @@
                             </div>
                         </div>
                     </div>
-                    <small class="text-muted my-1">Level</small>
-                    <div class="input-group mb-3 d-flex justify-content-center border">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="icheck-secondary">
-                                    <input type="radio" name="r2" id="admin" value="admin">
-                                    <label for="admin">
-                                        Admin
-                                    </label>
-                                </div>
-                                <div class="icheck-secondary">
-                                    <input type="radio" name="r2" id="petugas" value="petugas">
-                                    <label for="petugas">
-                                        Petugas
-                                    </label>
-                                </div>
-                                <div class="icheck-secondary">
-                                    <input type="radio" name="r2" id="masyarakat" value="masyarakat">
-                                    <label for="masyarakat">
-                                        Masyarakat
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="input-group mb-3">
                         <input type="password" class="form-control" placeholder="Password">
                         <div class="input-group-append">
@@ -98,7 +73,7 @@
                 <div class="d-flex justify-content-center">
                     <small class="my-3 text-center">
                         Already Have An Account?
-                        <a href="/" class="text-center">Sign In</a>
+                        <a href="/login" class="text-center">Sign In</a>
                     </small>
                 </div>
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::post('/login', [LoginController::class, 'login'])->name('login')->middleware('guest');
+
+
+
+// After Login
+// Admin
+Route::group(['middleware' => ['auth:user,masyarakat']], function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard.halaman1');
+    })->middleware('auth');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 });
 
 Route::get('/register', function () {
     return view('register');
-});
+})->middleware('guest');
